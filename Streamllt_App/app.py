@@ -1,11 +1,14 @@
+import pathlib
+
 import streamlit as st
 import pandas as pd
 import joblib
 
 # Load saved model, scaler, and expected columns
-model=joblib.load("../models/LogReg_heart.pkl")
-scaler = joblib.load("../models/scaler.pkl")
-expected_columns = joblib.load("../models/columns.pkl")
+BASE = pathlib.Path(__file__).resolve().parent.parent / "models"
+model = joblib.load(BASE / "LogReg_heart.pkl")
+scaler = joblib.load(BASE / "scaler.pkl")
+expected_columns = joblib.load(BASE / "columns.pkl")
 
 st.title("Heart Disease Prediction")
 st.markdown("Provide the following details to check your heart disease risk:")
