@@ -2,6 +2,10 @@
 
 A machine learning project that predicts the risk of heart disease from patient clinical features, with an interactive **Streamlit** web app.
 
+## 🚀 Live Demo
+
+**https://heart-disease-prediction-vj.streamlit.app/**
+
 ## Project Structure
 
 ```
